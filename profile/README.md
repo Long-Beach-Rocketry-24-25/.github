@@ -1,10 +1,14 @@
+![Adobe Express - file](https://github.com/user-attachments/assets/cbf2815c-a982-461d-80ee-dc06e400d84b) 
 # LONG BEACH ROCKETRY
-Hi there! We are a collegiate rocketry team competing in NASA's yearly USLI competition. We are open to all majors and levels of experience. Come join us on Discord! 
-[Discord](discord.gg/gyhjMFvYTy)
-[Instagram](instagram.com/longbeachrocketry)
-[Linkedin](https://www.linkedin.com/company/long-beach-rocketry)
-[Youtube](www.youtube.com/@longbeachrocketry)
-
+Hi there! We are a collegiate rocketry team competing in NASA's yearly USLI competition. We are open to all majors and levels of experience. Come join us on Discord!
+If you're an organization of individuals interested in sponsorship or working with us, you can reach us at longbeachrocketry@gmail.com.    
+[Discord](discord.gg/gyhjMFvYTy)   
+[Instagram](instagram.com/longbeachrocketry)  
+[Linkedin](https://www.linkedin.com/company/long-beach-rocketry)  
+[Youtube](www.youtube.com/@longbeachrocketry)  
+  
+  
+  
 # Environment Setup & Installing Prerequisites
 Our embedded software uses CMake + Ninja build system, and OpenOCD for debugging and programming.
 ## 1. Arm Toolchain
@@ -36,23 +40,27 @@ To debug, you have to install OpenOCD
 - Linux System: ```sudo apt-get install openocd```
 
 Additionally, grab the cortex-debug for VSCode. There is a reference launch.json file in the repository already under the .vscode folder if you want to take a look.
-
+  
+  
+  
 # Building Scripts
 To build:
-- Windows System: Use the .ps1 script in PowerShell. 
-- Unix System (Linux): Use the .sh script.
-The minimum parameters look like this: ./make.ps1 -t <name of preset>. For example, ./make.ps1 -t stm32f746 (see CMakePresets.json). 
+- Windows System: Use the ```.ps1``` script in PowerShell. 
+- Unix System (Linux): Use the ```.sh``` script.
+The minimum parameters look like this: ```./make.ps1 -t <name of preset>.``` For example, ```./make.ps1 -t stm32f746 (see CMakePresets.json)```. 
 
-It's also possible to specify a target application rather than building all available apps (which is the default), by using the -a parameter: ./make.ps1 -t stm32f746 -a cli_app.
+It's also possible to specify a target application rather than building all available apps (which is the default), by using the ```-a parameter: ./make.ps1 -t stm32f746 -a cli_app```.
 
-for a clean build, do ./make.ps1 -t <name of preset> -c
+for a clean build, do  ```./make.ps1 -t <name of preset> -c```
 
-Builds are by default done in Debug mode, but Release mode can be selected with the -r parameter: ./make.ps1 -t stm32f746 -r
-
+Builds are by default done in Debug mode, but Release mode can be selected with the -r parameter: ```./make.ps1 -t stm32f746 -r```
+  
+  
+  
 # Developing
-Install clang-format to auto-format your code - on Windows, try <python> -m pip install clang-format. On Linux, try sudo apt install clang-format. In VSCode, you can go to settings > Text Editor > Formatting > Format On Save to enable auto-formatting on save.
+Install clang-format to auto-format your code - on Windows, try ```<python> -m pip install clang-format```. On Linux, try sudo apt install clang-format. In VSCode, you can go to settings > Text Editor > Formatting > Format On Save to enable auto-formatting on save.
 
-To run native unit tests, you can open a PR on GitHub or build for native, then cd to build/native and run ctest.
+To run native unit tests, you can open a PR on GitHub or build for native, then cd to build/native and run ```ctest```.
 
 <!--
 
